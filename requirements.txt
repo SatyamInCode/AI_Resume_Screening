@@ -1,0 +1,23 @@
+# Web framework
+fastapi==0.109.2  # For API development
+uvicorn==0.27.1  # ASGI server for FastAPI
+python-multipart==0.0.9  # Required for FastAPI form handling
+
+# OpenAI API
+openai==1.12.0  # GPT model interaction
+
+# Environment Variables
+python-dotenv==1.0.1  # Manage .env variables
+
+# PDF & DOCX Processing
+python-docx==1.1.0  # Extract text from DOCX resumes
+PyMuPDF==1.23.6  # Extract text from PDFs
+pdfplumber==0.10.3  # Additional PDF text extraction support
+
+# Sentence Embeddings (SBERT)
+sentence-transformers==2.5.1  # SBERT model for similarity scoring
+torch==2.2.1  # Required for SBERT
+
+# Utilities
+pydantic==2.6.3  # Data validation
+tqdm==4.66.2  # Progress bars for processing

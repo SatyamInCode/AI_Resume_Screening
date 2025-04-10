@@ -1,0 +1,35 @@
+# Azure AI Studio Deployment Configuration
+
+name: resume-matcher-api
+location: eastus  # Change as needed
+sku: Standard_B1ms  # Select appropriate VM size for deployment
+environment_variables:
+  OPENAI_API_KEY: "your_openai_api_key"
+  AZURE_STORAGE_CONNECTION_STRING: "your_storage_connection_string"
+
+# Container Settings
+container:
+  image: python:3.9  # Ensure correct Python version
+  command: ["uvicorn", "src.app:app", "--host", "0.0.0.0", "--port", "8000"]
+  ports:
+    - 8000
+  resources:
+    cpu: 1
+    memory: 2Gi
+
+# Logging & Monitoring
+logging:
+  level: info
+  retention_days: 7
+
+# Scaling Configuration
+scaling:
+  min_instances: 1
+  max_instances: 3
+  cpu_threshold: 75  # Auto-scale when CPU usage exceeds 75%
+
+# Networking
+network:
+  enable_public_access: true
+  allowed_ips:
+    - "0.0.0.0/0"  # Allow all IPs (modify for security)
