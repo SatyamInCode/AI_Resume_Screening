@@ -120,9 +120,9 @@ uvicorn src.app:app --reload
 ---
 
 ## 💡 Authors & Credits
-Project developed by **[Your Name]** as part of an internship assessment.
+Project developed by **Satyam Sinha** as part of an internship assessment.
 
-📩 **Contact:** [your.email@example.com]
+📩 **Contact:** [sinha2satyam2004@gmail.com]
 
 ---
 
